@@ -1,0 +1,189 @@
+/* Basic CSS for the navigation bar */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        /* Navigation Bar Styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #1E1E1E, #333333); /* Dark Grey to Black */
+    color: white;
+    /* color: white;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 191, 255, 0.7)); */
+}
+
+nav img {
+    margin-right: 10px;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    /* color: white; */
+    color: #FFD700; /* Gold text for contrast */
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Search Box Styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    /* background: white; */
+    background: #FFF;
+    border: 2px solid #FFD700; /* Gold border */
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 12px;
+    outline: none;
+    width: 180px;
+}
+
+.search-box button {
+    border: none;
+    /* background: #007BFF;
+    color: white; */
+    background: #FFD700;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s; 
+
+}
+
+.search-box button:hover {
+    background-color: #555;
+    
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+.intro h2{
+    font-size: 50px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #FFD700; /* Gold for warm contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 350px
+
+}
+.intro p{
+    font-size: 16px;
+    color: #FFD700; /* Gold for warm contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
+    padding: 15px;
+    width: 350px; /* Adjust width as needed */
+}
+
+  /* Basic CSS for the form elements */
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('./Background image.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    margin: 0;
+    /* margin: 20px; */
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 200px;
+    padding: 5px;
+  }
+  
+  button {
+    padding: 7px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  img {
+    align-items: center;
+  }
+  
+  /* Basic CSS for the report section */
+  h2 {
+    margin-top: 30px;
+  }
+  
+  #report,#result {
+    padding: 10px;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+#result{
+  height: 400px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+  #result img{
+    width: 200px;
+    height: 100px;
+  }
+  
