@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
         /* Navigation Bar Styling */
 nav {
     display: flex;
@@ -13,19 +14,16 @@ nav {
     padding: 10px 20px;
     background: linear-gradient(to right, #1E1E1E, #333333); /* Dark Grey to Black */
     color: white;
-    /* color: white;
-    background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 191, 255, 0.7)); */
+
 }
 
-nav img {
-    margin-right: 10px;
+.logo-name{
+    display: flex;
+    align-items: center;
 }
-
-nav h1 {
-    margin: 0;
-    font-size: 24px;
+.logo-name h1{
+    padding: 5px;
 }
-
 nav ul {
     list-style: none;
     display: flex;
@@ -86,6 +84,61 @@ nav ul li a:hover {
     background-color: #555;
     
 }
+/* about us page items */
+.about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Aligns everything to the left */
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    padding-left: 200px;
+    padding-top: 120px;
+    
+}
+.about-us h2{
+    font-size: 70px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #FFD700; /* Gold for warm contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 600px
+}
+.about-us p{
+    font-size: 24px;
+    color: #FFD700; /* Gold for warm contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* Light yellow glow */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.team-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    height:fit-content;
+    background-size: cover;
+    background-position: center;
+    padding-top:120px;
+    padding-left: 300px;
+}
+.team-info h{
+    font-size: 70px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #FFD700; /* Gold for warm contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 200px
+}
 .intro{
     display: flex;
     flex-direction: column;
@@ -94,10 +147,10 @@ nav ul li a:hover {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    padding: 50px;
+    padding: 200px;
 }
 .intro h2{
-    font-size: 50px; /* Adjust size as needed */
+    font-size: 70px; /* Adjust size as needed */
     font-weight: bold;
     color: #FFD700; /* Gold for warm contrast */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
@@ -105,11 +158,11 @@ nav ul li a:hover {
     display: inline-block;
     padding: 20px;
     margin-bottom: 20px;
-    width: 350px
+    width: 600px
 
 }
 .intro p{
-    font-size: 16px;
+    font-size: 24px;
     color: #FFD700; /* Gold for warm contrast */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
     padding: 20px;
@@ -139,70 +192,52 @@ nav ul li a:hover {
 
   body {
     font-family: Arial, sans-serif;
-    background-image: url('./Background image.webp'); 
+    background-image: url('../images/Background image.webp'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    background-attachment: scroll;
+
     height: 100vh;
     margin: 0;
     /* margin: 20px; */
   }
   
-  h1 {
-    margin-bottom: 10px;
-  }
-  
-  div {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: inline-block;
-    width: 100px;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  select {
-    width: 200px;
-    padding: 5px;
-  }
-  
-  button {
-    padding: 7px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  img {
+
+/* social media bar */
+  .social-bar {
+    position: fixed;
+    top: 20%;
+    left: 20px; /
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }
-  
-  /* Basic CSS for the report section */
-  h2 {
-    margin-top: 30px;
-  }
-  
-  #report,#result {
-    padding: 10px;
-    max-width: 400px;
-    word-wrap: break-word;
-  }
-#result{
-  height: 400px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+    z-index: 1000;
 }
-  #result img{
-    width: 200px;
-    height: 100px;
-  }
+
+.social-bar a {
+    margin: 10px 0;
+    display: block;
+}
+
+.social-bar img {
+    width: 60px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-bar img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Vertical Line */
+.line {
+    width: 2px;
+    height: 200px;
+    background:  #FFD700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
   
