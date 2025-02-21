@@ -90,7 +90,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Aligns everything to the left */
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -112,8 +112,27 @@ nav ul li a:hover {
     font-size: 16px;
     color: #FFD700; /* Gold for warm contrast */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
-    padding: 15px;
+    padding: 20px;
     width: 350px; /* Adjust width as needed */
+}
+.intro button{
+    color: #FFD700;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding: 15px 30px; /* Adjust padding for a better shape */
+    font-size: 18px;
+    border: 2px solid #FFD700; /* Gold border for a premium feel */
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 20px; /* Adds spacing between text and button */
+    cursor: pointer;
+    display: inline-block; /* Ensures proper sizing */
+    margin-left:20px;
+}
+
+.intro button:hover {
+    background-color: #FFD700;
+    color: black;
 }
 
   /* Basic CSS for the form elements */
