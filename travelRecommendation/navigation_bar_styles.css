@@ -128,7 +128,7 @@ nav ul li a:hover {
     padding-top:120px;
     padding-left: 300px;
 }
-.team-info h{
+.team-info h3{
     font-size: 70px; /* Adjust size as needed */
     font-weight: bold;
     color: #FFD700; /* Gold for warm contrast */
@@ -166,7 +166,7 @@ nav ul li a:hover {
     color: #FFD700; /* Gold for warm contrast */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
     padding: 20px;
-    width: 350px; /* Adjust width as needed */
+    width: 400px; /* Adjust width as needed */
 }
 .intro button{
     color: #FFD700;
