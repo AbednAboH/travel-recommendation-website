@@ -208,8 +208,7 @@ nav ul li a:hover {
   .social-bar {
     position: fixed;
     top: 20%;
-    left: 20px; /
-    transform: translateY(-50%);
+    left: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,7 +221,8 @@ nav ul li a:hover {
 }
 
 .social-bar img {
-    width: 60px; 
+    max-width: 60px;
+    width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -230,41 +230,51 @@ nav ul li a:hover {
 .social-bar img:hover {
     transform: scale(1.2); /* Slight zoom effect on hover */
 }
+/* Shrink images when screen size is smaller */
+@media (max-width: 768px) {
+    .line,.social-bar img {
+        max-width: 40px; /* Reduce size on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .line,.social-bar img {
+        max-width: 30px; /* Even smaller for phones */
+    }
+}
+
+@media (max-width: 320px) {
+    .line,.social-bar img {
+        max-width: 10px; /* Minimum size for very small screens */
+    }
+}
 
 /* Vertical Line */
 .line {
     width: 2px;
-    height: 200px;
+    height: auto;
+    max-height: 300px;
+    min-height: 100px;
     background:  #FFD700;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 .contact-contatiner {
     display: flex;
-    justify-content:left; /* Pushes "Contact Us" left and form right */
+    justify-content:left; 
     align-items: center; /* Aligns items at the same height */
     width: 100%;
     padding: 200px;
+    gap:20%;
+    height: 100%;
 }
 
 /* Left Side: Contact Us */
 .contact-us {
-   pa
     text-align: left;
 }
-
-/* Right Side: Contact Form */
-.contactForm {
-   
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Move Title and Paragraph Down */
 .contact-us h2{
-    font-size: 70px; /* Adjust size as needed */
+    font-size: 100px; /* Adjust size as needed */
     font-weight: bold;
     color: #FFD700; /* Gold for warm contrast */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
@@ -272,22 +282,36 @@ nav ul li a:hover {
     display: inline-block;
     padding: 20px;
     margin-bottom: 20px;
-    width: 600px
+    
 } 
 .contact-us p {
     font-size: 24px;
     color: #FFD700; /* Gold for warm contrast */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for clarity */
     padding: 20px;
-    width: 400px;
+  
 }
+/* Right Side: Contact Form */
+.contactForm {
+   
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    
 }
+
+/* Move Title and Paragraph Down */
+
+
 
 /* Form Input Styling */
 .contactForm div {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    width:100%
 }
 
 .contactForm label {
@@ -315,7 +339,7 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    width: 100%; /* Makes button full width */
+    width: 100%;
     text-align: center;
 }
 
