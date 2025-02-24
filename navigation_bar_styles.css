@@ -192,7 +192,7 @@ nav ul li a:hover {
 
   body {
     font-family: Arial, sans-serif;
-    background-image: url('../images/Background image.webp'); 
+    background-image: url('./images/Background image.webp'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
