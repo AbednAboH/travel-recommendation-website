@@ -10,7 +10,8 @@ function search(){
         if (input.toLowerCase().includes("beach")){
             const beaches=getTwoRandomItems(data.beaches);
             beaches.forEach(beach=>{
-                resultDiv.innerHTML+=`<div><img src="${beach.imageUrl}" alt="hjh"></img><div><h2>${beach.name}</h2><p>${beach.description}</p><button id='btn${beach.id}'>Visit</button></div></div>`;
+                
+                resultDiv.innerHTML+=`<div><img src="${beach.imageUrl}" alt="hjh"></img><div><h2>${beach.name}</h2><p>${beach.description}</p><button id='btn${beach.id}' onclick="notAvailable()">Visit</button></div></div>`;
             })
 
         
@@ -18,29 +19,35 @@ function search(){
         else if (input.toLowerCase().includes("countr")){
             const countries=getTwoRandomItems(data.countries);
             var selectedCountries=[];
-            console.log(countries);
+
             countries.forEach(country => {
+
                 let randomIndex=Math.floor(Math.random() * country.cities.length);
                 selectedCountries.push([country.cities[randomIndex],country.id]);
             });
-            console.log(selectedCountries);
+           
             selectedCountries.forEach(country=>{
-                resultDiv.innerHTML+=`<div><img src="${country[0].imageUrl}" alt="hjh"></img><div><h2>${country[0].name}</h2><p>${country[0].description}</p><button id='btn${country[1].id}'>Visit</button></div></div>`;
+                try{
+                    resultDiv.innerHTML+=`<div><img src="${country[0].imageUrl}" alt="hjh"></img><div><h2>${country[0].name}             ${timezoneUpdate(country[0].name)}</h2><p>${country[0].description}</p><button id='btn${country[1].id}' onclick="notAvailable()">Visit</button></div></div>`;
+                }
+                catch{
+                    resultDiv.innerHTML+=`<div><img src="${country[0].imageUrl}" alt="hjh"></img><div><h2>${country[0].name}</h2><p>${country[0].description}</p><button id='btn${country[1].id}' onclick="notAvailable()">Visit</button></div></div>`;
+                }
             })
-            console.log(selectedCountries);
+            
           
         }
         else if (input.toLowerCase().includes("templ")){
             const temples=getTwoRandomItems(data.temples);
             temples.forEach(temple=>{
-                resultDiv.innerHTML+=`<div><img src="${temple.imageUrl}" alt="hjh"></img><div><h2>${temple.name}</h2><p>${temple.description}</p><button id='btn${temple.id}'>Visit</button></div></div>`;
+                resultDiv.innerHTML+=`<div><img src="${temple.imageUrl}" alt="hjh"></img><div><h2>${temple.name}</h2><p>${temple.description}</p><button id='btn${temple.id}' onclick="notAvailable()">Visit</button></div></div>`;
               
             })
             
         }
         else{
-            console.log("didn't reach");
-            // display a message
+            alert("Please enter a valid option : Beaches ,countries or temples");
+
         }    
     
     })
@@ -63,7 +70,15 @@ function cleartext(){
     resultDiv.innerHTML=``;
 }
 function thankyou(){
-    
+    alert("Thank you for contacting us!");
+}
+function notAvailable(){
+    alert("This functionality isn't available yet!");
+}
+function timezoneUpdate(userTimez){
+    const userTimezone = userTimez.split(",").map(str => str.trim());
+    const options = { timeZone: userTimezone[1]+"/"+userTimezone[0], hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    return new Date().toLocaleTimeString('en-US', options);
 }
 searchBtn.addEventListener('click',search);
 clearBtn.addEventListener('click',cleartext);
