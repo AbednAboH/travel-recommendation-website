@@ -59,9 +59,13 @@ function cleartext(){
     const input=document.getElementById("SearchInput");
     const resultDiv = document.getElementById('result');
     input.value="";
-    input.placeholder="Enter a destinations"
+    input.placeholder="Enter a destinations";
     resultDiv.innerHTML=``;
+}
+function thankyou(){
+    
 }
 searchBtn.addEventListener('click',search);
 clearBtn.addEventListener('click',cleartext);
+
 
